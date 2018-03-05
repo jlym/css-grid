@@ -1,5 +1,6 @@
 :root {
   --bold-color: #ffc600;
+  --light-color: white;
 }
 
 body {
@@ -80,4 +81,28 @@ img {
 
 .cta2 {
   grid-column-start: 2;
+}
+
+/*
+--------------------------------------------------------------------
+*/
+
+
+/*
+ TODO: Fix the padding on the menu items, and fix the font.
+*/
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 20px;
+}
+
+.feature {
+  background-color: var(--light-color);
+  display: grid;
+  justify-items: center;  
+  text-align: center;
+}
+.icon {
+  font-size: 50px;
 }
