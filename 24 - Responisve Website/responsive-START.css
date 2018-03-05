@@ -1,3 +1,7 @@
+:root {
+  --bold-color: #ffc600;
+}
+
 body {
   font-size: 15px;
 }
@@ -12,3 +16,68 @@ img {
   max-width: 100%;
 }
 
+.wrapper {
+  display: grid;
+}
+
+.top {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 20px;
+}
+
+.hero {
+  background-image: url("./images/taco.jpg");
+  background-attachment: scroll;
+  background-origin: padding-box;
+  background-position: 100% 100%;
+  background-size: cover;
+  height: 400px;
+  grid-row-start: 1;
+  grid-row-end: span 2;
+
+  display: grid;
+  justify-items: start;
+}
+
+.hero h1 {
+  background-color: var(--bold-color);  
+  align-self: end;
+  margin-left: 50px;
+  padding: 5px;
+}
+
+.hero p {
+  background-color: var(--bold-color);  
+  align-self:start;
+  margin-left: 50px;
+  padding: 5px;
+}
+
+.price {
+  font-size: 60px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-weight: 300;
+  align-self: end;
+}
+
+.cta {
+  background: var(--bold-color);
+  width: 100%;
+  display: grid;
+  
+  justify-items: center;
+  align-items: start;
+}
+
+.cta p {
+  margin: 0;  
+}
+
+.cta1 {
+  grid-column-start: 2;
+}
+
+.cta2 {
+  grid-column-start: 2;
+}
