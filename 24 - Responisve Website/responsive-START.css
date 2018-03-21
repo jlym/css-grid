@@ -35,10 +35,14 @@ img {
 }
 
 .top {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-gap: 20px;
   grid-area: top;
+
+
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    "hero hero cta1"
+    "hero hero cta2";
 }
 
 .hero {
@@ -48,8 +52,7 @@ img {
   background-position: 100% 100%;
   background-size: cover;
   height: 400px;
-  grid-row-start: 1;
-  grid-row-end: span 2;
+  grid-area: hero;
 
   display: grid;
   justify-items: start;
@@ -90,11 +93,29 @@ img {
 }
 
 .cta1 {
-  grid-column-start: 2;
+  grid-area: cta1;
+
 }
 
 .cta2 {
-  grid-column-start: 2;
+  grid-area: cta2;
+}
+
+@media (max-width: 685px) {
+  .top {
+    grid-template-areas:
+      "hero hero"
+      "cta1 cta2";
+  }
+}
+
+@media (max-width: 600px) {
+  .top {
+    grid-template-areas:
+      "hero"
+      "cta1"
+      "cta2";
+  }
 }
 
 /*
