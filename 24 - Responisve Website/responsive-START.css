@@ -202,15 +202,18 @@ img {
 */
 
 .about {
-  display: grid;
-  
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-
   background: white;
-  align-items: center;
-  justify-items: start;
-
   padding: 40px;
+
+  display: grid;  
+  grid-template-columns: 400px 1fr;  
+  align-items: center;
+}
+
+@media (max-width: 685px) {
+  .about {
+    grid-template-columns: 1fr;  
+  }
 }
 
 /*
